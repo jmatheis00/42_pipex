@@ -6,7 +6,7 @@
 /*   By: jmatheis <jmatheis@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:42:17 by jmatheis          #+#    #+#             */
-/*   Updated: 2022/11/08 07:59:49 by jmatheis         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:59:27 by jmatheis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,3 @@ int	main(int argc, char **argv, char **envp)
 	free_after_piping(&var);
 	return (0);
 }
-
-// system("leaks pipex");
-
-// ++++++++++++++++++++++++++++++++++
-// *****
-// CHAR **ENVP
-// *****
-// ->user environemnt
-// -> PATH: checking cmd paths
-// *****
-// OPEN FLAGS
-// *****
-// A call to creat() is equivalent to
-// calling open() with flags
-// equal to O_CREAT|O_WRONLY|O_TRUNC.
-// *****
-// OPEN PERMISSIONS
-// ****
-// 0 --> file, d --> directory
-// 0666 is an octal number, 
-// 6 = rw
-// 7 = rwx
-// Owner perm | Group perm | worl perm
-// when open existing file -> perm makes no sense
-// when create a file -> random set of perm

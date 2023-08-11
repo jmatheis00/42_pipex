@@ -6,13 +6,14 @@
 #    By: jmatheis <jmatheis@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/03 19:33:15 by jmatheis          #+#    #+#              #
-#    Updated: 2022/11/29 08:48:24 by jmatheis         ###   ########.fr        #
+#    Updated: 2023/08/11 15:00:00 by jmatheis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= pipex
-CFLAGS		= -Wall -Werror -Wextra -g #-fsanitize=address -g
 CC			= cc
+CFLAGS		= -Wall -Werror -Wextra -g #-fsanitize=address -g
+
 MAN_FILES	= src/commands.c \
 			src/init_and_free.c \
 			src/man_main.c \
@@ -38,7 +39,9 @@ PRINTF = lib/printf
 LIBFT = lib/libft
 GNL = lib/getnextline
 
-#RULES
+# ************* #
+#     RULES     #
+# ************* #
 
 $(NAME): $(LIBS) $(MAN_OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(MAN_OBJ) $(LIBS)

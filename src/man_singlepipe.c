@@ -6,7 +6,7 @@
 /*   By: jmatheis <jmatheis@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 17:24:01 by jmatheis          #+#    #+#             */
-/*   Updated: 2022/10/31 14:58:10 by jmatheis         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:59:34 by jmatheis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,17 +80,3 @@ void	pipes(t_var *var)
 	childprocesses(var, id1, id2, fd);
 	parentprocess(fd, id1, id2, var);
 }
-
-	// CHILD PROCESS WRITES TO PIPE
-	// ++WRITE++
-	// IN THE END CLOSE
-	// PARENT PROCESS READS
-	//  WAITS FOR CHILD PROCESS TO BE FINISHED
-	// ++READ++
-	// IN THE END CLOSE
-// Protection for dup2
-// -1 is returned and the global integer variable
-// errno is set to indicate the error.
-// If execve() does return to the calling process, an error has occurred;
-// the return value will be -1 and the global variable errno is set to
-// indicate the error.

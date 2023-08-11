@@ -6,7 +6,7 @@
 /*   By: jmatheis <jmatheis@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:01:31 by jmatheis          #+#    #+#             */
-/*   Updated: 2022/11/08 08:04:35 by jmatheis         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:58:54 by jmatheis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ static void	redirections(int argc, char **argv, char **envp, t_var *var)
 		var->no_of_cmds = argc - 3;
 		var->infile = open(argv[1], O_RDONLY);
 		if (var->infile < 0)
-		{
 			errorexit("ERROR: Check infile");
-		}
 		var->outfile = open(argv[argc - 1], O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	}
 	if (var->outfile < 0)
