@@ -1,4 +1,4 @@
-# pipex_42
+# 42_pipex
 >The Pipex project deepens understanding of Unix concepts such as Redirections and Pipes,
 >providing an introduction to more advanced Unix tasks.
 >This project involves creating a program that replicates the functionality of shell commands using pipes and data redirection,
